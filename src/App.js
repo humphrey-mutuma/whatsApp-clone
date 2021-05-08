@@ -6,8 +6,7 @@ function App() {
     <div className="app">
       <div className="app_body">
         <Sidebar />
-        
-        {/* chat */}
+        <Chat />
       </div>
     </div>
   );
