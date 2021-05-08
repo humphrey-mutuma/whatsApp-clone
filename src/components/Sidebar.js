@@ -8,6 +8,10 @@ import "./Sidebar.css";
 import SidebarChat from "./SidebarChat";
 
 const Sidebar = () => {
+  
+
+
+
   return (
     <div className="sidebar">
       <div className="sidebar_header">

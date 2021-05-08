@@ -14,8 +14,12 @@ const Chat = () => {
   }, []);
 
   const sendMessage = (e) => {
+    e.preventDefault();
+    console.log(input)
 
+    setInput('')
   }
+
   return (
     <div className="chat">
       <div className="chat_header">
@@ -47,7 +51,7 @@ const Chat = () => {
       <div className="chat_footer">
         <InsertEmoticonIcon />
         <form>
-          <input onChange={} type="text" placeholder="Type a message" />
+          <input value={input} onChange={e => setInput(e.target.value)} type="text" placeholder="Type a message" />
           <button onClick={sendMessage} type="submit"></button>
         </form>
         <MicIcon />
