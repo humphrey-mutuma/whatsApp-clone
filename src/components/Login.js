@@ -1,13 +1,22 @@
 import { Button } from "@material-ui/core";
 import React from "react";
 import { auth, provider } from "../firebase";
+import { actionType } from "../reducer";
+import { useStateValue } from "../StateProvider";
 import "./Login.css";
 
 const Login = () => {
+  const [{}, dispatch] = useStateValue();
+
   const signIn = () => {
     auth
       .signInWithPopup(provider)
-      .then((result) => console.log(result))
+      .then((result) => {
+        dispatch({
+          type:actionType.SET_USER,
+          user:result.user
+        })
+      })
       .catch((error) => alert(error.message));
   };
 
