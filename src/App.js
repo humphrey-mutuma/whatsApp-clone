@@ -1,4 +1,3 @@
-import { useState } from "react";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import "./App.css";
 import Chat from "./components/Chat";
@@ -7,7 +6,7 @@ import Sidebar from "./components/Sidebar";
 import { useStateValue } from "./StateProvider";
 
 function App() {
-  
+
   const [{user}, dispatch] = useStateValue();
 
   return (
